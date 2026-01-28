@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Fold - Unfold Your Story</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#8B0000", // Adjusted to match the specific deep red from the mobile button
+                        "background-light": "#F2EFE5", // Adjusted to match the specific cream background from the mobile app
+                        "background-dark": "#1A1A1A", // Dark Charcoal
+                        "brand-red": "#990000", // Deep Red for accents
+                        "brand-cream": "#F2EFE5", // Cream for text
+                        "brand-charcoal": "#1A1A1A", // Dark Charcoal for text
+                    },
+                    fontFamily: {
+                        display: ['"Cormorant Garamond"', 'serif'],
+                        sans: ['"Inter"', 'sans-serif'],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.5rem",
+                        'xl': '1rem',
+                        '2xl': '1.5rem',
+                        '3xl': '2rem',
+                        '4xl': '2.5rem',
+                    },
+                    backgroundImage: {
+                        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+                    }
+                },
+            },
+        };
+    </script>
+<style>.glass-panel {
+            background: rgba(26, 26, 26, 0.4);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(242, 239, 229, 0.1);
+        }
+        .glass-button {
+            background: rgba(242, 239, 229, 0.1);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(242, 239, 229, 0.3);
+            color: #F2EFE5;
+            transition: all 0.3s ease;
+        }
+        .glass-button:hover {
+            background: rgba(242, 239, 229, 0.2);
+            border-color: rgba(242, 239, 229, 0.6);
+            transform: translateY(-1px);
+        }
+        .glass-button-primary {
+            background: #990000;
+            color: #F2EFE5;
+            border: 1px solid #990000;
+            transition: all 0.3s ease;
+        }
+        .glass-button-primary:hover {
+            background: #7a0000;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(153, 0, 0, 0.3);
+        }
+        .text-shadow-sm {
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+        .input-glass {
+            background: rgba(242, 239, 229, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(242, 239, 229, 1);
+            color: #1A1A1A;
+        }
+        .input-glass::placeholder {
+             color: #666;
+        }
+        .input-glass:focus-within {
+            background: #F2EFE5;
+            border-color: #990000;
+        }.filter-deep-red {
+            filter: hue-rotate(-25deg) saturate(1.2) contrast(1.1) brightness(0.9);
+        }
+    </style>
+</head>
+<body class="bg-[#F2EFE5] dark:bg-background-dark h-screen w-screen overflow-hidden flex items-center justify-center p-4 md:p-6 transition-colors duration-500">
+<main class="relative w-full h-full rounded-[30px] md:rounded-[48px] overflow-hidden shadow-2xl group isolate bg-background-dark">
+<div class="absolute inset-0 w-full h-full z-0">
+<img alt="Surreal landscape with flowing red hills like folded paper" class="w-full h-full object-cover transition-transform duration-[2000ms] group-hover:scale-105 filter-deep-red" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSdlNhNrlD8B7S_BKfcKqVJghI16BZNl_PxQINUImeuBWb0b7MI6YN0R-9s0ghUaF2WUD4X1Ck68cc-heH8rLj9NKXGyL-vAw1zRsaGyKWXglhLpEq0sSNnEB3RuQ-3uTfpIBJHe3vYipHxgzx2caYt1rm9KLRyXY5dF7yakP2hfOyTBXyBMSD6qLbzI0DLUL0AbioDUGOFPYDT6UdjnTYBat4KaIGdma7RCIM5oW6r4Zu9tMEfJnl_Z_C5c3xxab9IFLZVH8EbdUT"/>
+<div class="absolute inset-0 bg-gradient-to-b from-[#1A1A1A] via-[#1A1A1A]/40 to-transparent mix-blend-multiply opacity-90"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-[#4a0404]/80 via-[#7f1d1d]/40 to-transparent mix-blend-overlay"></div>
+<div class="absolute inset-0 bg-[#1A1A1A]/20"></div>
+</div>
+<div class="relative z-10 flex flex-col justify-between h-full w-full p-6 md:p-10 lg:p-12 text-brand-cream">
+<nav class="flex items-center justify-between w-full">
+<div class="flex items-center gap-2">
+<svg class="w-8 h-8 text-brand-cream" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 2L2 22h20L12 2zm0 3.8L18.5 20H5.5L12 5.8z"></path>
+<path d="M12 9l-3.5 7h7L12 9z" opacity="0.7"></path>
+</svg>
+<span class="font-display italic text-2xl tracking-wide font-medium">Fold.app</span>
+</div>
+<div class="hidden md:flex items-center gap-8 font-sans text-sm tracking-wide font-medium text-brand-cream/80">
+<a class="hover:text-white transition-colors" href="#">Manifesto</a>
+<a class="hover:text-white transition-colors" href="#">Origins</a>
+<a class="hover:text-white transition-colors" href="#">FAQ</a>
+</div>
+<a class="glass-button-primary px-6 py-2 rounded-full font-sans text-sm font-medium hover:scale-105 transition-transform shadow-lg" href="#join">
+                    Access Waitlist
+                </a>
+</nav>
+<section class="flex flex-col items-center justify-center text-center max-w-5xl mx-auto space-y-8 mt-12 md:mt-0">
+<h1 class="font-display italic text-6xl md:text-8xl lg:text-9xl leading-tight text-brand-cream drop-shadow-lg">
+                    Unfold Your Story
+                </h1>
+<p class="font-sans font-light text-lg md:text-xl lg:text-2xl text-brand-cream/90 max-w-2xl leading-relaxed drop-shadow-md">
+                    Fold is a private sanctuary for your memories. Capture the unspoken emotions and fleeting moments in a digital tapestry woven from your life.
+                </p>
+<div class="flex flex-col sm:flex-row gap-4 pt-4 w-full justify-center">
+<button class="glass-button px-8 py-3 rounded-full text-base font-medium min-w-[180px]">
+                        Watch the Film
+                    </button>
+<button class="glass-button px-8 py-3 rounded-full text-base font-medium min-w-[180px]">
+                        Read Our Story
+                    </button>
+</div>
+</section>
+<div class="w-full flex flex-col items-center justify-end pb-4 md:pb-8 space-y-4">
+<div class="w-full max-w-xl mx-auto">
+<form class="relative group" id="join">
+<input class="input-glass w-full rounded-full py-4 pl-8 pr-16 text-brand-charcoal font-medium placeholder-brand-charcoal/50 outline-none focus:ring-2 focus:ring-brand-red/30 font-sans text-lg transition-all shadow-xl" placeholder="Enter your email for early access" type="email"/>
+<button class="absolute right-2 top-2 bottom-2 bg-brand-red text-brand-cream rounded-full w-12 h-12 flex items-center justify-center hover:bg-[#7a0000] transition-colors shadow-md" type="submit">
+<span class="material-icons-outlined text-2xl">arrow_forward</span>
+</button>
+</form>
+</div>
+<p class="font-sans text-xs md:text-sm text-brand-cream/60 text-center max-w-md">
+                    Join our newsletter for exclusive insights into the art of memory keeping.
+                </p>
+</div>
+</div>
+</main>
+</body></html>

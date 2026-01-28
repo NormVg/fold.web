@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .glass-panel {
+    background: rgba(24, 23, 23, 0.4);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(237, 234, 220, 0.1);
+  }
+
+  .glass-button {
+    background: rgba(237, 234, 220, 0.1);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(237, 234, 220, 0.3);
+    color: #EDEADC;
+    transition: all 0.3s ease;
+  }
+
+  .glass-button:hover {
+    background: rgba(237, 234, 220, 0.2);
+    border-color: rgba(237, 234, 220, 0.6);
+    transform: translateY(-1px);
+  }
+
+  .glass-button-primary {
+    background: #810100;
+    color: #EDEADC;
+    border: 1px solid #810100;
+    transition: all 0.3s ease;
+  }
+
+  .glass-button-primary:hover {
+    background: #8D1A1A;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(129, 1, 0, 0.3);
+  }
+
+  .text-shadow-sm {
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  }
+
+  .input-glass {
+    background: rgba(237, 234, 220, 0.95);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(237, 234, 220, 1);
+    color: #181717;
+  }
+
+  .input-glass::placeholder {
+    color: #666;
+  }
+
+  .input-glass:focus-within {
+    background: #EDEADC;
+    border-color: #810100;
+  }
+
+  .filter-deep-red {
+    filter: hue-rotate(-25deg) saturate(1.2) contrast(1.1) brightness(0.9);
+  }
+
+  .handwritten {
+    font-family: 'Inter', sans-serif;
+    font-style: italic;
+    transform: rotate(-2deg);
+  }
+
+  .aura-glow {
+    background: radial-gradient(circle, rgba(129, 1, 0, 0.4) 0%, rgba(237, 234, 220, 0.05) 60%, transparent 80%);
+    filter: blur(40px);
+  }
+
+  /* Material Icons Outlined support */
+  .material-icons-outlined {
+    font-family: 'Material Icons Outlined';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+  }
+}
