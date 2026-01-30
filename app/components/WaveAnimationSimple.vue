@@ -17,7 +17,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
 }
 
 .wave-background {
@@ -33,11 +32,11 @@
 .wave-layer {
   content: "";
   position: absolute;
-  width: 325vh;
-  height: 325vh;
-  top: 0;
+  width: 200vmax;
+  height: 200vmax;
+  top: -5%;
   left: 50%;
-  transform: translate(-50%, -75%);
+  transform: translate(-50%, -60%);
   background: #000;
 }
 
@@ -61,24 +60,59 @@
 
 @keyframes wave-animate {
   0% {
-    transform: translate(-50%, -75%) rotate(0deg);
+    transform: translate(-50%, -60%) rotate(0deg);
   }
   100% {
-    transform: translate(-50%, -75%) rotate(360deg);
+    transform: translate(-50%, -60%) rotate(360deg);
+  }
+}
+
+/* Tablet and smaller desktops */
+@media (max-width: 1024px) {
+  .wave-layer {
+    top: -10%;
+    transform: translate(-50%, -65%);
+  }
+  @keyframes wave-animate {
+    0% {
+      transform: translate(-50%, -65%) rotate(0deg);
+    }
+    100% {
+      transform: translate(-50%, -65%) rotate(360deg);
+    }
   }
 }
 
 /* Mobile: Adjust top position to bring waves higher */
 @media (max-width: 768px) {
   .wave-layer {
-    top: -25%;
+    top: -15%;
+    transform: translate(-50%, -60%);
+  }
+  @keyframes wave-animate {
+    0% {
+      transform: translate(-50%, -60%) rotate(0deg);
+    }
+    100% {
+      transform: translate(-50%, -60%) rotate(360deg);
+    }
   }
 }
 
 /* Extra small phones: Even higher */
 @media (max-width: 480px) {
   .wave-layer {
-    top: -35%;
+    top: -20%;
+    transform: translate(-50%, -55%);
+  }
+  @keyframes wave-animate {
+    0% {
+      transform: translate(-50%, -55%) rotate(0deg);
+    }
+    100% {
+      transform: translate(-50%, -55%) rotate(360deg);
+    }
   }
 }
 </style>
+

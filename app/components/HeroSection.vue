@@ -9,25 +9,27 @@
     </div>
 
     <!-- Content -->
-    <div class="relative z-10 flex flex-col justify-between h-full w-full p-6 md:p-10 lg:p-12 text-brand-cream">
+    <div class="relative z-10 flex flex-col h-full w-full p-4 md:p-10 lg:p-12 text-brand-cream">
       <!-- Navigation -->
-      <AppNavigation />
+      <div class="flex-shrink-0">
+        <AppNavigation />
+      </div>
 
       <!-- Hero Content -->
-      <section class="flex flex-col items-center justify-center text-center max-w-5xl mx-auto space-y-8 mt-12 md:mt-0">
-        <h1 class="font-display italic text-6xl md:text-8xl lg:text-9xl leading-tight text-brand-cream drop-shadow-lg">
+      <section class="flex-1 flex flex-col items-center justify-center text-center max-w-5xl mx-auto space-y-3 md:space-y-6">
+        <h1 class="font-display italic text-[2.5rem] md:text-8xl lg:text-9xl leading-tight text-brand-cream drop-shadow-lg">
           {{ heroTitle }}
         </h1>
-        <p class="font-sans font-light text-lg md:text-xl lg:text-2xl text-brand-cream/90 max-w-2xl leading-relaxed drop-shadow-md">
+        <p class="font-sans font-light text-sm md:text-xl lg:text-2xl text-brand-cream/90 max-w-2xl leading-relaxed drop-shadow-md px-2">
           {{ heroDescription }}
         </p>
 
         <!-- Action Buttons -->
-        <div class="flex flex-col sm:flex-row gap-4 pt-4 w-full justify-center">
+        <div class="flex flex-col sm:flex-row gap-2 md:gap-4 pt-1 md:pt-4 w-full justify-center">
           <button
             v-for="action in heroActions"
             :key="action.text"
-            class="glass-button px-8 py-3 rounded-full text-base font-medium min-w-[180px]"
+            class="glass-button px-5 md:px-8 py-2 md:py-3 rounded-full text-sm md:text-base font-medium min-w-[140px] md:min-w-[180px]"
             @click="action.onClick"
           >
             {{ action.text }}
@@ -36,13 +38,10 @@
       </section>
 
       <!-- Email Signup Form -->
-      <div class="w-full flex flex-col items-center justify-end pb-4 md:pb-8 space-y-4">
+      <div class="flex-shrink-0 w-full flex flex-col items-center pb-1 md:pb-4">
         <div class="w-full max-w-xl mx-auto">
           <HeroEmailForm />
         </div>
-        <p class="font-sans text-xs md:text-sm text-brand-cream/60 text-center max-w-md">
-          Join our newsletter for exclusive insights into the art of memory keeping.
-        </p>
       </div>
     </div>
   </main>

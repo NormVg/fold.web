@@ -1,14 +1,20 @@
 <!DOCTYPE html>
-<html lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Fold - Unfold Your Story</title>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<script>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Fold - Unfold Your Story</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400;1,600&amp;family=Inter:wght@300;400;500;600&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
         tailwind.config = {
             darkMode: "class",
             theme: {
@@ -39,12 +45,14 @@
             },
         };
     </script>
-<style>.glass-panel {
+    <style>
+        .glass-panel {
             background: rgba(26, 26, 26, 0.4);
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
             border: 1px solid rgba(242, 239, 229, 0.1);
         }
+
         .glass-button {
             background: rgba(242, 239, 229, 0.1);
             backdrop-filter: blur(8px);
@@ -52,275 +60,358 @@
             color: #F2EFE5;
             transition: all 0.3s ease;
         }
+
         .glass-button:hover {
             background: rgba(242, 239, 229, 0.2);
             border-color: rgba(242, 239, 229, 0.6);
             transform: translateY(-1px);
         }
+
         .glass-button-primary {
             background: #990000;
             color: #F2EFE5;
             border: 1px solid #990000;
             transition: all 0.3s ease;
         }
+
         .glass-button-primary:hover {
             background: #7a0000;
             transform: translateY(-1px);
             box-shadow: 0 4px 12px rgba(153, 0, 0, 0.3);
         }
+
         .text-shadow-sm {
-            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
         }
+
         .input-glass {
             background: rgba(242, 239, 229, 0.95);
             backdrop-filter: blur(10px);
             border: 1px solid rgba(242, 239, 229, 1);
             color: #1A1A1A;
         }
+
         .input-glass::placeholder {
-             color: #666;
+            color: #666;
         }
+
         .input-glass:focus-within {
             background: #F2EFE5;
             border-color: #990000;
         }
+
         .filter-deep-red {
             filter: hue-rotate(-25deg) saturate(1.2) contrast(1.1) brightness(0.9);
-        }.handwritten {
-            font-family: 'Inter', sans-serif;font-style: italic;
-            transform: rotate(-2deg);
-        }@keyframes float {
-            0% { transform: translateY(0px) rotate(0deg); }
-            50% { transform: translateY(-10px) rotate(1deg); }
-            100% { transform: translateY(0px) rotate(0deg); }
         }
+
+        .handwritten {
+            font-family: 'Inter', sans-serif;
+            font-style: italic;
+            transform: rotate(-2deg);
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0px) rotate(0deg);
+            }
+
+            50% {
+                transform: translateY(-10px) rotate(1deg);
+            }
+
+            100% {
+                transform: translateY(0px) rotate(0deg);
+            }
+        }
+
         .animate-float {
             animation: float 6s ease-in-out infinite;
         }
+
         .animate-float-delayed {
             animation: float 7s ease-in-out infinite 1s;
-        }.aura-glow {
+        }
+
+        .aura-glow {
             background: radial-gradient(circle, rgba(153, 0, 0, 0.4) 0%, rgba(242, 239, 229, 0.05) 60%, transparent 80%);
             filter: blur(40px);
         }
     </style>
 </head>
+
 <body class="bg-[#F2EFE5] dark:bg-background-dark overflow-x-hidden w-screen transition-colors duration-500">
-<main class="relative w-full h-screen rounded-b-[48px] overflow-hidden shadow-2xl group isolate bg-background-dark mb-12">
-<div class="absolute inset-0 w-full h-full z-0">
-<img alt="Surreal landscape with flowing red hills like folded paper" class="w-full h-full object-cover transition-transform duration-[2000ms] group-hover:scale-105 filter-deep-red" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSdlNhNrlD8B7S_BKfcKqVJghI16BZNl_PxQINUImeuBWb0b7MI6YN0R-9s0ghUaF2WUD4X1Ck68cc-heH8rLj9NKXGyL-vAw1zRsaGyKWXglhLpEq0sSNnEB3RuQ-3uTfpIBJHe3vYipHxgzx2caYt1rm9KLRyXY5dF7yakP2hfOyTBXyBMSD6qLbzI0DLUL0AbioDUGOFPYDT6UdjnTYBat4KaIGdma7RCIM5oW6r4Zu9tMEfJnl_Z_C5c3xxab9IFLZVH8EbdUT"/>
-<div class="absolute inset-0 bg-gradient-to-b from-[#1A1A1A] via-[#1A1A1A]/40 to-transparent mix-blend-multiply opacity-90"></div>
-<div class="absolute inset-0 bg-gradient-to-t from-[#4a0404]/80 via-[#7f1d1d]/40 to-transparent mix-blend-overlay"></div>
-<div class="absolute inset-0 bg-[#1A1A1A]/20"></div>
-</div>
-<div class="relative z-10 flex flex-col justify-between h-full w-full p-6 md:p-10 lg:p-12 text-brand-cream">
-<nav class="flex items-center justify-between w-full">
-<div class="flex items-center gap-2">
-<svg class="w-8 h-8 text-brand-cream" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-<path d="M12 2L2 22h20L12 2zm0 3.8L18.5 20H5.5L12 5.8z"></path>
-<path d="M12 9l-3.5 7h7L12 9z" opacity="0.7"></path>
-</svg>
-<span class="font-display italic text-2xl tracking-wide font-medium">Fold.app</span>
-</div>
-<div class="hidden md:flex items-center gap-8 font-sans text-sm tracking-wide font-medium text-brand-cream/80">
-<a class="hover:text-white transition-colors" href="#">Manifesto</a>
-<a class="hover:text-white transition-colors" href="#">Origins</a>
-<a class="hover:text-white transition-colors" href="#">FAQ</a>
-</div>
-<a class="glass-button-primary px-6 py-2 rounded-full font-sans text-sm font-medium hover:scale-105 transition-transform shadow-lg" href="#join">
-                        Access Waitlist
-                    </a>
-</nav>
-<section class="flex flex-col items-center justify-center text-center max-w-5xl mx-auto space-y-8 mt-12 md:mt-0 flex-grow">
-<h1 class="font-display italic text-6xl md:text-8xl lg:text-9xl leading-tight text-brand-cream drop-shadow-lg">
-                        Unfold Your Story
-                    </h1>
-<p class="font-sans font-light text-lg md:text-xl lg:text-2xl text-brand-cream/90 max-w-2xl leading-relaxed drop-shadow-md">
-                        Fold is a private sanctuary for your memories. Capture the unspoken emotions and fleeting moments in a digital tapestry woven from your life.
+    <main
+        class="relative w-full h-screen rounded-b-[48px] overflow-hidden shadow-2xl group isolate bg-background-dark mb-12">
+        <div class="absolute inset-0 w-full h-full z-0">
+            <img alt="Surreal landscape with flowing red hills like folded paper"
+                class="w-full h-full object-cover transition-transform duration-[2000ms] group-hover:scale-105 filter-deep-red"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSdlNhNrlD8B7S_BKfcKqVJghI16BZNl_PxQINUImeuBWb0b7MI6YN0R-9s0ghUaF2WUD4X1Ck68cc-heH8rLj9NKXGyL-vAw1zRsaGyKWXglhLpEq0sSNnEB3RuQ-3uTfpIBJHe3vYipHxgzx2caYt1rm9KLRyXY5dF7yakP2hfOyTBXyBMSD6qLbzI0DLUL0AbioDUGOFPYDT6UdjnTYBat4KaIGdma7RCIM5oW6r4Zu9tMEfJnl_Z_C5c3xxab9IFLZVH8EbdUT" />
+            <div
+                class="absolute inset-0 bg-gradient-to-b from-[#1A1A1A] via-[#1A1A1A]/40 to-transparent mix-blend-multiply opacity-90">
+            </div>
+            <div
+                class="absolute inset-0 bg-gradient-to-t from-[#4a0404]/80 via-[#7f1d1d]/40 to-transparent mix-blend-overlay">
+            </div>
+            <div class="absolute inset-0 bg-[#1A1A1A]/20"></div>
+        </div>
+        <div class="relative z-10 flex flex-col justify-between h-full w-full p-6 md:p-10 lg:p-12 text-brand-cream">
+            <nav class="flex items-center justify-between w-full">
+                <div class="flex items-center gap-2">
+                    <svg class="w-8 h-8 text-brand-cream" fill="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2L2 22h20L12 2zm0 3.8L18.5 20H5.5L12 5.8z"></path>
+                        <path d="M12 9l-3.5 7h7L12 9z" opacity="0.7"></path>
+                    </svg>
+                    <span class="font-display italic text-2xl tracking-wide font-medium">Fold.app</span>
+                </div>
+                <div
+                    class="hidden md:flex items-center gap-8 font-sans text-sm tracking-wide font-medium text-brand-cream/80">
+                    <a class="hover:text-white transition-colors" href="#">Manifesto</a>
+                    <a class="hover:text-white transition-colors" href="#">Origins</a>
+                    <a class="hover:text-white transition-colors" href="#">FAQ</a>
+                </div>
+                <a class="glass-button-primary px-6 py-2 rounded-full font-sans text-sm font-medium hover:scale-105 transition-transform shadow-lg"
+                    href="#join">
+                    Access Waitlist
+                </a>
+            </nav>
+            <section
+                class="flex flex-col items-center justify-center text-center max-w-5xl mx-auto space-y-8 mt-12 md:mt-0 flex-grow">
+                <h1
+                    class="font-display italic text-6xl md:text-8xl lg:text-9xl leading-tight text-brand-cream drop-shadow-lg">
+                    Unfold Your Story
+                </h1>
+                <p
+                    class="font-sans font-light text-lg md:text-xl lg:text-2xl text-brand-cream/90 max-w-2xl leading-relaxed drop-shadow-md">
+                    Fold is a private sanctuary for your memories. Capture the unspoken emotions and fleeting moments in
+                    a digital tapestry woven from your life.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 pt-4 lg:pt-8 w-full justify-center">
+                    <button class="glass-button px-8 py-3 rounded-full text-base font-medium min-w-[180px]">
+                        Watch the Film
+                    </button>
+                    <button class="glass-button px-8 py-3 rounded-full text-base font-medium min-w-[180px]">
+                        Read Our Story
+                    </button>
+                </div>
+            </section>
+            <div class="w-full flex flex-col items-center justify-end pb-4 md:pb-8 space-y-4">
+                <div class="animate-bounce mb-4 text-brand-cream/60">
+                    <span class="material-symbols-outlined">keyboard_arrow_down</span>
+                </div>
+            </div>
+        </div>
+    </main>
+    <section class="w-full bg-[#F2EFE5] py-24 px-6 md:px-12 lg:px-24">
+        <div class="max-w-7xl mx-auto mb-16 text-center">
+            <h2 class="font-display text-4xl md:text-5xl lg:text-6xl text-brand-charcoal mb-6">Reconnect with your past
+            </h2>
+            <p class="font-sans text-brand-charcoal/70 text-lg max-w-2xl mx-auto">
+                Experiences that weave together community, memory, and identity. A digital home for your most precious
+                artifacts.
+            </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 max-w-7xl mx-auto items-center">
+            <div class="flex flex-col gap-8 md:mt-24">
+                <div
+                    class="bg-white p-4 rounded-3xl shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-1">
+                    <div class="aspect-[4/5] bg-neutral-100 rounded-xl overflow-hidden mb-4 relative group">
+                        <div class="absolute inset-0 bg-gray-200 flex items-center justify-center text-gray-400">
+                            <span class="material-symbols-outlined text-4xl">photo_camera</span>
+                        </div>
+                        <img alt="Memory photo"
+                            class="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 transition-all duration-500"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCwO1F65PFohgW3rR-MEt0sar_bAC2s-xE47KpldKRD6ejnh3DPfMQrTA2rfxS4abxE1oOsCaa9pcAI1TglFGtdstV9HaOr60gFHnQQhVVt2m3yvSh_AtjRDWDIlIY8irD3WyfifZWevMJyuBFvVae9zCmdfQYg2KedmaEmYk3oJVjSKKPJp5G687apXJ4_HwloJs8oN7DHhliJ0ApZIp5qAiR35ceYUwQPfj2lBZV-sbkjGWeXZSGMC5ZAg3Bk8h6xRkCZ5emJMhM" />
+                    </div>
+                    <div class="flex justify-between items-center px-2">
+                        <span class="font-display italic text-lg text-brand-charcoal">The old studio</span>
+                        <span class="text-xs text-gray-500 font-sans">1984</span>
+                    </div>
+                </div>
+                <div class="bg-brand-charcoal p-6 rounded-3xl shadow-lg text-brand-cream">
+                    <span class="material-symbols-outlined text-3xl mb-3 text-brand-red">graphic_eq</span>
+                    <p class="font-sans text-sm opacity-80 mb-2">Voice Note • 2m 14s</p>
+                    <div class="w-full h-8 flex items-center gap-1 opacity-60">
+                        <div class="h-4 w-1 bg-brand-cream rounded-full"></div>
+                        <div class="h-6 w-1 bg-brand-cream rounded-full"></div>
+                        <div class="h-3 w-1 bg-brand-cream rounded-full"></div>
+                        <div class="h-8 w-1 bg-brand-cream rounded-full"></div>
+                        <div class="h-5 w-1 bg-brand-cream rounded-full"></div>
+                        <div class="h-2 w-1 bg-brand-cream rounded-full"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col gap-8">
+                <div
+                    class="bg-white p-6 rounded-3xl shadow-xl border border-gray-100 h-[500px] flex flex-col justify-center items-center text-center relative overflow-hidden group">
+                    <div class="absolute inset-0 bg-gradient-to-br from-brand-red/5 to-transparent opacity-50"></div>
+                    <span class="material-symbols-outlined text-4xl text-brand-red mb-6">format_quote</span>
+                    <p class="font-display text-2xl md:text-3xl text-brand-charcoal leading-relaxed z-10 px-4">
+                        "It was a Tuesday when the rain finally stopped, and we realized the garden had bloomed while we
+                        weren't looking."
                     </p>
-<div class="flex flex-col sm:flex-row gap-4 pt-4 w-full justify-center">
-<button class="glass-button px-8 py-3 rounded-full text-base font-medium min-w-[180px]">
-                            Watch the Film
-                        </button>
-<button class="glass-button px-8 py-3 rounded-full text-base font-medium min-w-[180px]">
-                            Read Our Story
-                        </button>
-</div>
-</section>
-<div class="w-full flex flex-col items-center justify-end pb-4 md:pb-8 space-y-4">
-<div class="animate-bounce mb-4 text-brand-cream/60">
-<span class="material-symbols-outlined">keyboard_arrow_down</span>
-</div>
-</div>
-</div>
-</main>
-<section class="w-full bg-[#F2EFE5] py-24 px-6 md:px-12 lg:px-24">
-<div class="max-w-7xl mx-auto mb-16 text-center">
-<h2 class="font-display text-4xl md:text-5xl lg:text-6xl text-brand-charcoal mb-6">Reconnect with your past</h2>
-<p class="font-sans text-brand-charcoal/70 text-lg max-w-2xl mx-auto">
-            Experiences that weave together community, memory, and identity. A digital home for your most precious artifacts.
+                    <div class="mt-8 flex items-center gap-3 z-10">
+                        <div
+                            class="w-8 h-8 rounded-full bg-brand-red text-brand-cream flex items-center justify-center font-display italic">
+                            M</div>
+                        <span class="font-sans text-sm text-gray-500">Journal Entry #42</span>
+                    </div>
+                </div>
+            </div>
+            <div class="flex flex-col gap-8 md:mt-12">
+                <div class="bg-[#e8e4d8] p-6 rounded-3xl shadow-lg relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-24 h-24 bg-brand-red/10 rounded-full -mr-10 -mt-10 blur-xl">
+                    </div>
+                    <h3 class="font-display text-2xl text-brand-charcoal mb-4">Daily Reflection</h3>
+                    <div class="space-y-3">
+                        <div class="h-2 w-3/4 bg-brand-charcoal/10 rounded-full"></div>
+                        <div class="h-2 w-full bg-brand-charcoal/10 rounded-full"></div>
+                        <div class="h-2 w-5/6 bg-brand-charcoal/10 rounded-full"></div>
+                    </div>
+                    <div class="mt-6 flex justify-end">
+                        <span class="material-symbols-outlined text-brand-charcoal/40">arrow_forward</span>
+                    </div>
+                </div>
+                <div
+                    class="bg-white p-3 rounded-2xl shadow-md rotate-2 hover:rotate-0 transition-transform duration-300 w-3/4 mx-auto">
+                    <img alt="Portrait"
+                        class="w-full aspect-square object-cover rounded-xl filter grayscale contrast-125"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDb3NhJWSbxbfwcVsq7aWiv7DdazqyI5xCDSHLGXPgT1wpnJGbYVoJGONRKz8_lXs5OoGiu5zB7Wx-OBJCBf1LOUADzE_QIiNIcutMNxhMp9ghILo6c4RWDWvYvLZcb7XE8y6JhWWhNmCi-6M_hXRL-H8DvJ_hncUwr6UK6AxlTc_Gdl7bo_BXDwKk81wR8cPhCrEslfrTIvua4_RBrjuxmQZDFtx19syisWl5CHZEB4rVKnX5NU4Wt-hN_UvpVCIuT5qlypwpujPaj" />
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="w-full bg-brand-charcoal py-32 px-6 md:px-12 lg:px-24 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div class="space-y-16">
+                <h2 class="font-display italic text-5xl text-brand-cream mb-12">The Process of Being</h2>
+                <div class="group cursor-pointer">
+                    <div class="flex items-baseline gap-4 mb-2">
+                        <span class="font-sans text-sm text-brand-red font-medium">01</span>
+                        <h3
+                            class="font-display text-4xl md:text-5xl text-brand-cream group-hover:text-brand-red transition-colors duration-300">
+                            Discover</h3>
+                    </div>
+                    <p
+                        class="font-sans text-brand-cream/50 text-lg pl-9 max-w-md border-l border-brand-cream/10 ml-2 py-2 group-hover:border-brand-red/50 transition-colors">
+                        Unearth the hidden patterns in your daily life through gentle prompts.
+                    </p>
+                </div>
+                <div class="group cursor-pointer">
+                    <div class="flex items-baseline gap-4 mb-2">
+                        <span class="font-sans text-sm text-brand-red font-medium">02</span>
+                        <h3
+                            class="font-display text-4xl md:text-5xl text-brand-cream group-hover:text-brand-red transition-colors duration-300">
+                            Capture</h3>
+                    </div>
+                    <p
+                        class="font-sans text-brand-cream/50 text-lg pl-9 max-w-md border-l border-brand-cream/10 ml-2 py-2 group-hover:border-brand-red/50 transition-colors">
+                        Record moments instantly—voice, text, or image—before they fade.
+                    </p>
+                </div>
+                <div class="group cursor-pointer">
+                    <div class="flex items-baseline gap-4 mb-2">
+                        <span class="font-sans text-sm text-brand-red font-medium">03</span>
+                        <h3
+                            class="font-display text-4xl md:text-5xl text-brand-cream group-hover:text-brand-red transition-colors duration-300">
+                            Reflect</h3>
+                    </div>
+                    <p
+                        class="font-sans text-brand-cream/50 text-lg pl-9 max-w-md border-l border-brand-cream/10 ml-2 py-2 group-hover:border-brand-red/50 transition-colors">
+                        Look back on your tapestry and understand your emotional journey.
+                    </p>
+                </div>
+            </div>
+            <div class="relative h-[600px] w-full flex items-center justify-center">
+                <div class="absolute w-[400px] h-[400px] rounded-full aura-glow opacity-80 animate-pulse"></div>
+                <div
+                    class="relative w-64 h-64 md:w-80 md:h-80 rounded-full bg-gradient-to-br from-brand-cream to-[#d4d1c5] shadow-[0_0_60px_rgba(242,239,229,0.2)] flex items-center justify-center overflow-hidden">
+                    <div
+                        class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-30 mix-blend-overlay">
+                    </div>
+                    <div
+                        class="w-full h-full bg-gradient-to-t from-brand-red/80 to-transparent opacity-60 mix-blend-multiply rounded-full scale-110 blur-2xl transform translate-y-10">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="w-full bg-[#F2EFE5] py-32 px-4 overflow-hidden relative">
+        <div class="max-w-6xl mx-auto text-center mb-20 relative z-10">
+            <h2 class="font-display text-5xl text-brand-charcoal mb-6">Fragments of Time</h2>
+            <p class="font-sans text-brand-charcoal/60 text-lg">Your life, scattered and gathered in one beautiful
+                place.</p>
+        </div>
+        <div class="relative h-[800px] w-full max-w-7xl mx-auto">
+            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 text-center z-20">
+                <h3 class="font-display italic text-4xl text-brand-charcoal mb-4">A Year in Review.</h3>
+                <p class="font-sans text-sm text-brand-charcoal/70 leading-relaxed">
+                    From quiet mornings to loud celebrations, every hue of emotion is preserved here.
+                </p>
+            </div>
+            <div
+                class="absolute top-10 left-[10%] w-48 md:w-64 bg-white p-2 rounded-lg shadow-xl transform -rotate-6 animate-float z-10">
+                <img alt="Landscape" class="w-full aspect-[3/4] object-cover rounded mb-2 filter sepia-[0.3]"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsO9PBJq-rawCrqnbiCDSYInmiGU5tDsS8x_DV7tCRUGv6YO2ulVBeT6K0pAvkTG9l5F79DPIY-WMxKyzZ8bje5iY7D5PjDVWZaKt3HarlezLiNamr68WOQt-eGBStJOUCzk7shDIIbe613We2NTZ8nyTozz1B9R1burhWTDahxFGR_708W8O16W7P3EWqKx60qh94HHOKpsaXcOJfoe4bg0Ogkxit5uzmZ0Q1KYnVrdKt77szt_MXhhGA9mHcJmekmHO55ifbmedE" />
+                <p class="font-sans text-xs text-center text-gray-500 py-1">Lakes at 6 in the morning</p>
+            </div>
+            <div class="absolute top-48 left-[28%] hidden md:block opacity-60">
+                <svg class="transform rotate-12" fill="none" height="60" stroke="#1A1A1A" stroke-width="2"
+                    viewBox="0 0 100 100" width="60">
+                    <path d="M10,10 Q50,50 90,30"></path>
+                    <path d="M80,25 L90,30 L85,40"></path>
+                </svg>
+                <span class="handwritten text-sm absolute top-0 left-10 w-32">Roadtrip to Torino</span>
+            </div>
+            <div
+                class="absolute bottom-20 right-[15%] w-56 bg-white p-3 pb-6 rounded shadow-lg transform rotate-3 animate-float-delayed z-10">
+                <img alt="Beach" class="w-full aspect-video object-cover rounded filter contrast-125"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkKfPZbKw9jsF56te46xtH43QhONGx6FaYjs9UoH0fvfG-hgZZQLwFQaXE5YarIWCt_KfJRvA1n-PwmfHIZMM6DUh5u-G0Q_N2XxriMq2YPU6Zcq9CQHN1vdaZq-Bwbu3wSE6YIysu3BVVxjylUyE91gM4dK8GCQeMrENagfrgKQoH_Vitt6l39YQf-aM-Xo8bEwUUI8r0RGOR5bTvPGJ9TxIUv9ZoV2FQEx_8qo65rydh83gX4FUKAcbCsLMmtuDc_juEBN0FYN8K" />
+                <div class="absolute -bottom-4 right-4 bg-yellow-100 px-3 py-1 shadow-sm transform rotate-2">
+                    <span class="handwritten text-xs text-brand-charcoal">Last year's trip</span>
+                </div>
+            </div>
+            <div
+                class="absolute top-24 right-[10%] w-48 bg-[#fffdf5] p-4 shadow-md transform rotate-2 z-0 border border-gray-100">
+                <p class="handwritten text-brand-charcoal text-sm leading-relaxed">
+                    "Walking into something new feels like..."
+                </p>
+            </div>
+            <div class="absolute top-40 right-[25%] hidden md:block opacity-60">
+                <svg class="transform -rotate-45" fill="none" height="50" stroke="#1A1A1A" stroke-width="2"
+                    viewBox="0 0 100 100" width="50">
+                    <path d="M90,90 Q50,50 10,90"></path>
+                    <path d="M20,95 L10,90 L20,80"></path>
+                </svg>
+            </div>
+            <div
+                class="absolute bottom-32 left-[15%] w-52 bg-brand-charcoal text-brand-cream p-6 rounded-2xl shadow-2xl transform -rotate-3 z-10">
+                <span class="text-4xl block mb-2 font-display">24</span>
+                <span class="text-sm font-sans uppercase tracking-widest opacity-70">October</span>
+                <hr class="border-brand-cream/20 my-3" />
+                <p class="font-display italic text-lg">A rainy Tuesday</p>
+            </div>
+        </div>
+    </section>
+    <div
+        class="w-full bg-brand-red py-24 px-6 md:px-12 flex flex-col items-center justify-center text-center rounded-t-[48px] shadow-[0_-20px_60px_rgba(0,0,0,0.3)] relative z-20">
+        <div class="w-full max-w-xl mx-auto">
+            <h2 class="font-display italic text-4xl md:text-5xl text-brand-cream mb-8">Ready to start capturing?</h2>
+            <form class="relative group" id="join">
+                <input
+                    class="input-glass w-full rounded-full py-4 pl-8 pr-16 text-brand-charcoal font-medium placeholder-brand-charcoal/50 outline-none focus:ring-2 focus:ring-brand-red/30 font-sans text-lg transition-all shadow-xl"
+                    placeholder="Enter your email for early access" type="email" />
+                <button
+                    class="absolute right-2 top-2 bottom-2 bg-brand-charcoal text-brand-cream rounded-full w-12 h-12 flex items-center justify-center hover:bg-black transition-colors shadow-md"
+                    type="submit">
+                    <span class="material-symbols-outlined text-2xl">arrow_forward</span>
+                </button>
+            </form>
+        </div>
+        <p class="font-sans text-xs md:text-sm text-brand-cream/60 text-center max-w-md mt-6">
+            Join our newsletter for exclusive insights into the art of memory keeping.
         </p>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 max-w-7xl mx-auto items-center">
-<div class="flex flex-col gap-8 md:mt-24">
-<div class="bg-white p-4 rounded-3xl shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-1">
-<div class="aspect-[4/5] bg-neutral-100 rounded-xl overflow-hidden mb-4 relative group">
-<div class="absolute inset-0 bg-gray-200 flex items-center justify-center text-gray-400">
-<span class="material-symbols-outlined text-4xl">photo_camera</span>
-</div>
-<img alt="Memory photo" class="w-full h-full object-cover grayscale opacity-80 group-hover:grayscale-0 transition-all duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCwO1F65PFohgW3rR-MEt0sar_bAC2s-xE47KpldKRD6ejnh3DPfMQrTA2rfxS4abxE1oOsCaa9pcAI1TglFGtdstV9HaOr60gFHnQQhVVt2m3yvSh_AtjRDWDIlIY8irD3WyfifZWevMJyuBFvVae9zCmdfQYg2KedmaEmYk3oJVjSKKPJp5G687apXJ4_HwloJs8oN7DHhliJ0ApZIp5qAiR35ceYUwQPfj2lBZV-sbkjGWeXZSGMC5ZAg3Bk8h6xRkCZ5emJMhM"/>
-</div>
-<div class="flex justify-between items-center px-2">
-<span class="font-display italic text-lg text-brand-charcoal">The old studio</span>
-<span class="text-xs text-gray-500 font-sans">1984</span>
-</div>
-</div>
-<div class="bg-brand-charcoal p-6 rounded-3xl shadow-lg text-brand-cream">
-<span class="material-symbols-outlined text-3xl mb-3 text-brand-red">graphic_eq</span>
-<p class="font-sans text-sm opacity-80 mb-2">Voice Note • 2m 14s</p>
-<div class="w-full h-8 flex items-center gap-1 opacity-60">
-<div class="h-4 w-1 bg-brand-cream rounded-full"></div>
-<div class="h-6 w-1 bg-brand-cream rounded-full"></div>
-<div class="h-3 w-1 bg-brand-cream rounded-full"></div>
-<div class="h-8 w-1 bg-brand-cream rounded-full"></div>
-<div class="h-5 w-1 bg-brand-cream rounded-full"></div>
-<div class="h-2 w-1 bg-brand-cream rounded-full"></div>
-</div>
-</div>
-</div>
-<div class="flex flex-col gap-8">
-<div class="bg-white p-6 rounded-3xl shadow-xl border border-gray-100 h-[500px] flex flex-col justify-center items-center text-center relative overflow-hidden group">
-<div class="absolute inset-0 bg-gradient-to-br from-brand-red/5 to-transparent opacity-50"></div>
-<span class="material-symbols-outlined text-4xl text-brand-red mb-6">format_quote</span>
-<p class="font-display text-2xl md:text-3xl text-brand-charcoal leading-relaxed z-10 px-4">
-                    "It was a Tuesday when the rain finally stopped, and we realized the garden had bloomed while we weren't looking."
-                 </p>
-<div class="mt-8 flex items-center gap-3 z-10">
-<div class="w-8 h-8 rounded-full bg-brand-red text-brand-cream flex items-center justify-center font-display italic">M</div>
-<span class="font-sans text-sm text-gray-500">Journal Entry #42</span>
-</div>
-</div>
-</div>
-<div class="flex flex-col gap-8 md:mt-12">
-<div class="bg-[#e8e4d8] p-6 rounded-3xl shadow-lg relative overflow-hidden">
-<div class="absolute top-0 right-0 w-24 h-24 bg-brand-red/10 rounded-full -mr-10 -mt-10 blur-xl"></div>
-<h3 class="font-display text-2xl text-brand-charcoal mb-4">Daily Reflection</h3>
-<div class="space-y-3">
-<div class="h-2 w-3/4 bg-brand-charcoal/10 rounded-full"></div>
-<div class="h-2 w-full bg-brand-charcoal/10 rounded-full"></div>
-<div class="h-2 w-5/6 bg-brand-charcoal/10 rounded-full"></div>
-</div>
-<div class="mt-6 flex justify-end">
-<span class="material-symbols-outlined text-brand-charcoal/40">arrow_forward</span>
-</div>
-</div>
-<div class="bg-white p-3 rounded-2xl shadow-md rotate-2 hover:rotate-0 transition-transform duration-300 w-3/4 mx-auto">
-<img alt="Portrait" class="w-full aspect-square object-cover rounded-xl filter grayscale contrast-125" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDb3NhJWSbxbfwcVsq7aWiv7DdazqyI5xCDSHLGXPgT1wpnJGbYVoJGONRKz8_lXs5OoGiu5zB7Wx-OBJCBf1LOUADzE_QIiNIcutMNxhMp9ghILo6c4RWDWvYvLZcb7XE8y6JhWWhNmCi-6M_hXRL-H8DvJ_hncUwr6UK6AxlTc_Gdl7bo_BXDwKk81wR8cPhCrEslfrTIvua4_RBrjuxmQZDFtx19syisWl5CHZEB4rVKnX5NU4Wt-hN_UvpVCIuT5qlypwpujPaj"/>
-</div>
-</div>
-</div>
-</section>
-<section class="w-full bg-brand-charcoal py-32 px-6 md:px-12 lg:px-24 relative overflow-hidden">
-<div class="max-w-7xl mx-auto relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-<div class="space-y-16">
-<h2 class="font-display italic text-5xl text-brand-cream mb-12">The Process of Being</h2>
-<div class="group cursor-pointer">
-<div class="flex items-baseline gap-4 mb-2">
-<span class="font-sans text-sm text-brand-red font-medium">01</span>
-<h3 class="font-display text-4xl md:text-5xl text-brand-cream group-hover:text-brand-red transition-colors duration-300">Discover</h3>
-</div>
-<p class="font-sans text-brand-cream/50 text-lg pl-9 max-w-md border-l border-brand-cream/10 ml-2 py-2 group-hover:border-brand-red/50 transition-colors">
-                    Unearth the hidden patterns in your daily life through gentle prompts.
-                </p>
-</div>
-<div class="group cursor-pointer">
-<div class="flex items-baseline gap-4 mb-2">
-<span class="font-sans text-sm text-brand-red font-medium">02</span>
-<h3 class="font-display text-4xl md:text-5xl text-brand-cream group-hover:text-brand-red transition-colors duration-300">Capture</h3>
-</div>
-<p class="font-sans text-brand-cream/50 text-lg pl-9 max-w-md border-l border-brand-cream/10 ml-2 py-2 group-hover:border-brand-red/50 transition-colors">
-                    Record moments instantly—voice, text, or image—before they fade.
-                </p>
-</div>
-<div class="group cursor-pointer">
-<div class="flex items-baseline gap-4 mb-2">
-<span class="font-sans text-sm text-brand-red font-medium">03</span>
-<h3 class="font-display text-4xl md:text-5xl text-brand-cream group-hover:text-brand-red transition-colors duration-300">Reflect</h3>
-</div>
-<p class="font-sans text-brand-cream/50 text-lg pl-9 max-w-md border-l border-brand-cream/10 ml-2 py-2 group-hover:border-brand-red/50 transition-colors">
-                    Look back on your tapestry and understand your emotional journey.
-                </p>
-</div>
-</div>
-<div class="relative h-[600px] w-full flex items-center justify-center">
-<div class="absolute w-[400px] h-[400px] rounded-full aura-glow opacity-80 animate-pulse"></div>
-<div class="relative w-64 h-64 md:w-80 md:h-80 rounded-full bg-gradient-to-br from-brand-cream to-[#d4d1c5] shadow-[0_0_60px_rgba(242,239,229,0.2)] flex items-center justify-center overflow-hidden">
-<div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/stardust.png')] opacity-30 mix-blend-overlay"></div>
-<div class="w-full h-full bg-gradient-to-t from-brand-red/80 to-transparent opacity-60 mix-blend-multiply rounded-full scale-110 blur-2xl transform translate-y-10"></div>
-</div>
-</div>
-</div>
-</section>
-<section class="w-full bg-[#F2EFE5] py-32 px-4 overflow-hidden relative">
-<div class="max-w-6xl mx-auto text-center mb-20 relative z-10">
-<h2 class="font-display text-5xl text-brand-charcoal mb-6">Fragments of Time</h2>
-<p class="font-sans text-brand-charcoal/60 text-lg">Your life, scattered and gathered in one beautiful place.</p>
-</div>
-<div class="relative h-[800px] w-full max-w-7xl mx-auto">
-<div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-80 text-center z-20">
-<h3 class="font-display italic text-4xl text-brand-charcoal mb-4">A Year in Review.</h3>
-<p class="font-sans text-sm text-brand-charcoal/70 leading-relaxed">
-                From quiet mornings to loud celebrations, every hue of emotion is preserved here.
-            </p>
-</div>
-<div class="absolute top-10 left-[10%] w-48 md:w-64 bg-white p-2 rounded-lg shadow-xl transform -rotate-6 animate-float z-10">
-<img alt="Landscape" class="w-full aspect-[3/4] object-cover rounded mb-2 filter sepia-[0.3]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsO9PBJq-rawCrqnbiCDSYInmiGU5tDsS8x_DV7tCRUGv6YO2ulVBeT6K0pAvkTG9l5F79DPIY-WMxKyzZ8bje5iY7D5PjDVWZaKt3HarlezLiNamr68WOQt-eGBStJOUCzk7shDIIbe613We2NTZ8nyTozz1B9R1burhWTDahxFGR_708W8O16W7P3EWqKx60qh94HHOKpsaXcOJfoe4bg0Ogkxit5uzmZ0Q1KYnVrdKt77szt_MXhhGA9mHcJmekmHO55ifbmedE"/>
-<p class="font-sans text-xs text-center text-gray-500 py-1">Lakes at 6 in the morning</p>
-</div>
-<div class="absolute top-48 left-[28%] hidden md:block opacity-60">
-<svg class="transform rotate-12" fill="none" height="60" stroke="#1A1A1A" stroke-width="2" viewBox="0 0 100 100" width="60">
-<path d="M10,10 Q50,50 90,30"></path>
-<path d="M80,25 L90,30 L85,40"></path>
-</svg>
-<span class="handwritten text-sm absolute top-0 left-10 w-32">Roadtrip to Torino</span>
-</div>
-<div class="absolute bottom-20 right-[15%] w-56 bg-white p-3 pb-6 rounded shadow-lg transform rotate-3 animate-float-delayed z-10">
-<img alt="Beach" class="w-full aspect-video object-cover rounded filter contrast-125" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkKfPZbKw9jsF56te46xtH43QhONGx6FaYjs9UoH0fvfG-hgZZQLwFQaXE5YarIWCt_KfJRvA1n-PwmfHIZMM6DUh5u-G0Q_N2XxriMq2YPU6Zcq9CQHN1vdaZq-Bwbu3wSE6YIysu3BVVxjylUyE91gM4dK8GCQeMrENagfrgKQoH_Vitt6l39YQf-aM-Xo8bEwUUI8r0RGOR5bTvPGJ9TxIUv9ZoV2FQEx_8qo65rydh83gX4FUKAcbCsLMmtuDc_juEBN0FYN8K"/>
-<div class="absolute -bottom-4 right-4 bg-yellow-100 px-3 py-1 shadow-sm transform rotate-2">
-<span class="handwritten text-xs text-brand-charcoal">Last year's trip</span>
-</div>
-</div>
-<div class="absolute top-24 right-[10%] w-48 bg-[#fffdf5] p-4 shadow-md transform rotate-2 z-0 border border-gray-100">
-<p class="handwritten text-brand-charcoal text-sm leading-relaxed">
-                "Walking into something new feels like..."
-            </p>
-</div>
-<div class="absolute top-40 right-[25%] hidden md:block opacity-60">
-<svg class="transform -rotate-45" fill="none" height="50" stroke="#1A1A1A" stroke-width="2" viewBox="0 0 100 100" width="50">
-<path d="M90,90 Q50,50 10,90"></path>
-<path d="M20,95 L10,90 L20,80"></path>
-</svg>
-</div>
-<div class="absolute bottom-32 left-[15%] w-52 bg-brand-charcoal text-brand-cream p-6 rounded-2xl shadow-2xl transform -rotate-3 z-10">
-<span class="text-4xl block mb-2 font-display">24</span>
-<span class="text-sm font-sans uppercase tracking-widest opacity-70">October</span>
-<hr class="border-brand-cream/20 my-3"/>
-<p class="font-display italic text-lg">A rainy Tuesday</p>
-</div>
-</div>
-</section>
-<div class="w-full bg-brand-red py-24 px-6 md:px-12 flex flex-col items-center justify-center text-center rounded-t-[48px] shadow-[0_-20px_60px_rgba(0,0,0,0.3)] relative z-20">
-<div class="w-full max-w-xl mx-auto">
-<h2 class="font-display italic text-4xl md:text-5xl text-brand-cream mb-8">Ready to start capturing?</h2>
-<form class="relative group" id="join">
-<input class="input-glass w-full rounded-full py-4 pl-8 pr-16 text-brand-charcoal font-medium placeholder-brand-charcoal/50 outline-none focus:ring-2 focus:ring-brand-red/30 font-sans text-lg transition-all shadow-xl" placeholder="Enter your email for early access" type="email"/>
-<button class="absolute right-2 top-2 bottom-2 bg-brand-charcoal text-brand-cream rounded-full w-12 h-12 flex items-center justify-center hover:bg-black transition-colors shadow-md" type="submit">
-<span class="material-symbols-outlined text-2xl">arrow_forward</span>
-</button>
-</form>
-</div>
-<p class="font-sans text-xs md:text-sm text-brand-cream/60 text-center max-w-md mt-6">
-                        Join our newsletter for exclusive insights into the art of memory keeping.
-                    </p>
-</div>
-</body></html>
+    </div>
+</body>
+
+</html>
